@@ -27,10 +27,20 @@ const Map: React.FC<MapProps> = ({ path, initialCenter, onCameraChanged }) => {
       {path.length > 0 && (
         <>
           <AdvancedMarker position={path[0]}>
-            <Pin scale={1.2} />
+            <Pin
+              scale={1.2}
+              background="#65b200"
+              borderColor="#5b980a"
+              glyphColor="white"
+            />
           </AdvancedMarker>
           <AdvancedMarker position={path[path.length - 1]}>
-            <Pin scale={1.2} />
+            <Pin
+              scale={1.2}
+              background="#65b200"
+              borderColor="#5b980a"
+              glyphColor="white"
+            />
           </AdvancedMarker>
         </>
       )}
