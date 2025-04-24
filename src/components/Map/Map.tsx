@@ -6,7 +6,6 @@ import {
   MapCameraChangedEvent,
 } from "@vis.gl/react-google-maps";
 import RoutePolyline from "./RoutePolyline";
-import styles from "./map.module.scss";
 
 export interface MapProps {
   path: google.maps.LatLngLiteral[];
@@ -17,7 +16,7 @@ export interface MapProps {
 const Map: React.FC<MapProps> = ({ path, initialCenter, onCameraChanged }) => {
   return (
     <GoogleMap
-      className={styles.map}
+      style={{ width: "60%", height: "400px" }}
       mapId="MAP_ID"
       defaultCenter={initialCenter}
       defaultZoom={13}

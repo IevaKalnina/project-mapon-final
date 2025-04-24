@@ -1,0 +1,58 @@
+.form {
+  background-color: white;
+  padding: 1.875rem;
+  width: 60%;
+  box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.1875rem;
+  box-sizing: border-box;
+}
+
+.dateWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+}
+
+.dateLabel {
+  margin-bottom: 0.25rem;
+  font-size: 0.9rem;
+}
+
+.calendarInput {
+  height: 1.875rem;
+  padding: 0 0.625rem;
+  border-radius: 0.1875rem;
+  padding-right: 2rem;
+  cursor: pointer;
+  width: 100%;
+  box-sizing: border-box;
+  border: 0.125rem solid #e8e6e6;
+  &:focus {
+    border: 0.125rem solid #d2cfcf;
+  }
+}
+
+.calendarIcon {
+  position: absolute;
+  right: 0.5rem;
+  pointer-events: none;
+  font-size: 1rem;
+  user-select: none;
+  bottom: 5px;
+}
+
+.calendarPopover {
+  position: absolute;
+  top: calc(100% + 0.25rem);
+  left: 0;
+  z-index: 10;
+  box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.1);
+  background: white;
+  border-radius: 0.1875rem;
+}
+
+.calendarPopover .react-calendar {
+  border: none;
+  border-radius: 0.1875rem;
+}

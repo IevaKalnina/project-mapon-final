@@ -1,19 +1,24 @@
 .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  gap: 2rem;
-
+  overflow: hidden;
   background-color: white;
   padding: 1.25rem;
   width: 60%;
   box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.1);
-  border-radius: 0.1875rem;
   box-sizing: border-box;
 }
 
 .item {
+  width: 9.375rem;
   text-align: center;
+  padding: 0 1.25rem;
+  color: #1f292f;
+  &:nth-child(2) {
+    border-right: 0.125rem solid #e8e6e6;
+    border-left: 0.125rem solid #e8e6e6;
+  }
 }
 
 .value {

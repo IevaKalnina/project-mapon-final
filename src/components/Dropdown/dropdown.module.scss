@@ -1,0 +1,25 @@
+.asterisk {
+  color: red;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.875rem;
+}
+
+.dropdown {
+  width: 70%;
+  height: 1.875rem;
+  border-radius: 0.1875rem;
+  border: .125rem solid #e8e6e6;
+  cursor: pointer;
+  &:focus {
+    border: .125rem solid #d2cfcf;
+  }
+}
+
+.option {
+  cursor: pointer;
+}

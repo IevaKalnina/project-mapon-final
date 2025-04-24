@@ -1,0 +1,25 @@
+.footer {
+  background-color: #e8e6e6;
+  display: flex;
+  justify-content: end;
+  padding: 0 1.875rem;
+  width: 60%;
+  box-sizing: border-box;
+  box-shadow: 0 0 0.125rem rgba(0, 0, 0, 0.1);
+}
+
+.button {
+  color: white;
+  margin: 1.25rem 0;
+  background-color: #65b200;
+  border: none;
+  padding: 0.3125rem 0.625rem;
+  border-radius: 0.1875rem;
+  cursor: pointer;
+
+  &:disabled {
+    background-color: #e8e6e6;
+    border: 0.125rem solid #939191;
+    color: #939191;
+  }
+}

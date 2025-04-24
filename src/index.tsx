@@ -4,7 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import { APIProvider } from "@vis.gl/react-google-maps";
 import { Provider } from "react-redux";
 import { store } from "./store/index";
-import "./index.css";
+import "./index.scss";
 import App from "./App";
 
 const GOOGLE_API_KEY = process.env.REACT_APP_GOOGLE_API_KEY;

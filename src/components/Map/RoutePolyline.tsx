@@ -11,19 +11,39 @@ const RoutePolyline: React.FC<RoutePolylineProps> = ({ path }) => {
   useEffect(() => {
     if (!map || path.length === 0) return;
 
-    const poly = new google.maps.Polyline({
+    // Outer glow
+    const glow = new google.maps.Polyline({
       path,
       strokeColor: "#0077FF",
       strokeOpacity: 0.8,
-      strokeWeight: 4,
+      strokeWeight: 5,
+      map,
     });
-    poly.setMap(map);
 
+    // Arrow symbol
+    const arrow: google.maps.Symbol = {
+      path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+      scale: 4,
+      strokeColor: "#055cc0",
+    };
+
+    // Inner line with arrows
+    const line = new google.maps.Polyline({
+      path,
+      strokeOpacity: 0,
+      icons: [{ icon: arrow, offset: "0%", repeat: "30px" }],
+      map,
+    });
+
+    // Fit bounds
     const bounds = new google.maps.LatLngBounds();
     path.forEach((pt) => bounds.extend(pt));
     map.fitBounds(bounds);
 
-    return () => void poly.setMap(null);
+    return () => {
+      glow.setMap(null);
+      line.setMap(null);
+    };
   }, [map, path]);
 
   return null;
