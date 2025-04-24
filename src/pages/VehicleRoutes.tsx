@@ -68,7 +68,6 @@ const VehicleRoutes: React.FC = () => {
       const resp = await fetchRoutes(v.unit_id, fmt(fromDate), fmt(toDate));
       const pieces: RawRoutePiece[] = resp.data.units[0]?.routes || [];
 
-      // Build detailed path from decoded points
       const detailed = pieces.flatMap(
         (r) =>
           r.decoded_route?.points.map((p) => ({
@@ -77,7 +76,6 @@ const VehicleRoutes: React.FC = () => {
           })) || []
       );
 
-      // Fallback to stop locations if no decoded points
       const fallback = pieces.map((r) => ({
         lat: r.start.lat,
         lng: r.start.lng,

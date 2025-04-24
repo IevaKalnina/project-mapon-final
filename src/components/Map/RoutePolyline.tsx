@@ -11,7 +11,6 @@ const RoutePolyline: React.FC<RoutePolylineProps> = ({ path }) => {
   useEffect(() => {
     if (!map || path.length === 0) return;
 
-    // Outer glow
     const glow = new google.maps.Polyline({
       path,
       strokeColor: "#0077FF",
@@ -20,14 +19,12 @@ const RoutePolyline: React.FC<RoutePolylineProps> = ({ path }) => {
       map,
     });
 
-    // Arrow symbol
     const arrow: google.maps.Symbol = {
       path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
       scale: 4,
       strokeColor: "#055cc0",
     };
 
-    // Inner line with arrows
     const line = new google.maps.Polyline({
       path,
       strokeOpacity: 0,
@@ -35,7 +32,6 @@ const RoutePolyline: React.FC<RoutePolylineProps> = ({ path }) => {
       map,
     });
 
-    // Fit bounds
     const bounds = new google.maps.LatLngBounds();
     path.forEach((pt) => bounds.extend(pt));
     map.fitBounds(bounds);
