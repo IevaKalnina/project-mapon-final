@@ -1,0 +1,43 @@
+.form {
+  background-color: white;
+  padding: 1.25rem;
+  width: 60%;
+  box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.1875rem;
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.875rem;
+  height: 1.875rem;
+}
+
+.dropdown {
+  width: 70%;
+  height: 1.875rem;
+  border-radius: 0.1875rem;
+}
+
+.calendarConatiner {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+}
+.calendarInput {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  cursor: pointer;
+  height: 1.875rem;
+  padding: 0 0.625rem;
+  border-radius: 0.1875rem;
+  width: auto;
+}
+
+.calendar {
+  position: absolute;
+  border-radius: 0.1875rem;
+  z-index: 1;
+}
